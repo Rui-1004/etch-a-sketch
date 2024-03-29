@@ -21,10 +21,16 @@ function updateGrid() {
 }
 
 function createGrid() {
+  gridSize = parseInt(prompt("Enter a number to choose a new grid size", 16));
+
+  while (gridSize > 100) gridSize = parseInt(prompt("Enter a number to choose a new grid size", 16));
+
+  if (isNaN(gridSize)) {
+    return;
+  }
+
   document.querySelectorAll(".grid-square").forEach((e) => e.parentNode.removeChild(e));
   document.querySelectorAll(".grid-row").forEach((e) => e.parentNode.removeChild(e));
-
-  gridSize = parseInt(prompt("Enter a number to choose a new grid size", 16));
 
   return updateGrid();
 }
