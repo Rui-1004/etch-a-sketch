@@ -1,0 +1,31 @@
+body {
+  background-color: grey;
+  display: flex;
+}
+
+.grid-size-button {
+  background-color: rgb(255, 238, 0);
+  font-weight: bold;
+  align-self: flex-start;
+  margin-right: 30px;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 40%;
+  background-color: white;
+  aspect-ratio: 1 / 1;
+}
+
+.grid-row {
+  display: flex;
+  flex: 1;
+}
+
+.grid-square {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+}
+
